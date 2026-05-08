@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-  </head>
   <body>
     <!-- ===== NAVIGATION ===== -->
     <header class="site-header">
@@ -51,34 +50,43 @@
           <h2 class="section-title">Over mij</h2>
           <div class="about-grid">
             <div class="about-avatar">
-              <div class="avatar-placeholder">MB</div>
+              <img src="shared/images/selfie.jpg" alt="Michael Bielen" class="avatar-img" />
             </div>
             <div class="about-text">
               <p>
-                Welkom op mijn portfolio! Ik ben <strong>Michael Bielen</strong>,
-                een student <strong>Toegepaste Informatica</strong> aan
-                <strong>PXL University of Applied Sciences &amp; Arts</strong>.
+                Hallo! Ik ben <strong>Michael Bielen</strong>, een student
+                <strong>Toegepaste Informatica</strong> aan
+                <strong>PXL University of Applied Sciences &amp; Arts</strong>
+                in Hasselt, België.
               </p>
               <p>
-                Ik ben gepassioneerd door softwareontwikkeling, webtechnologie
-                en het bouwen van nuttige applicaties. Via mijn opleiding heb ik
-                een stevige basis opgebouwd in zowel back-end als front-end
-                development.
+                Mijn passie ligt sterk bij programmeren. Ik hou ervan om
+                applicaties te bouwen zonder bouwmaterialen – alleen met mijn
+                laptop kan ik bijna elke applicatie realiseren die ik wil.
+                Buiten programmeren geniet ik van boulderen met vrienden en ben
+                ik geïnteresseerd in IT-disciplines zoals robotica, elektronica
+                en netwerken. Ik run zelfs een kleine homelab thuis waar ik met
+                netwerken en infrastructuur experimenteer.
               </p>
               <p>
-                Naast mijn studies neem ik actief deel aan seminaries om mijn
-                kennis bij te houden en nieuwe trends te ontdekken in de
-                IT-wereld.
+                Over vijf jaar hoop ik ofwel freelance te werken met meer
+                vrijheid in mijn uren, ofwel samen met mijn broer een klein
+                softwarebedrijf op te starten. Ik ben ook gepassioneerd over AI
+                en wil hier veel meer ervaring mee opdoen.
               </p>
               <ul class="skill-tags">
                 <li>Java</li>
+                <li>C#</li>
                 <li>JavaScript</li>
-                <li>HTML &amp; CSS</li>
+                <li>Flutter</li>
                 <li>React</li>
                 <li>Spring Boot</li>
-                <li>Git</li>
+                <li>.NET</li>
                 <li>SQL</li>
                 <li>Docker</li>
+                <li>Event-Driven Architecture</li>
+                <li>Domain Driven Design</li>
+                <li>DevOps</li>
               </ul>
             </div>
           </div>
@@ -88,75 +96,182 @@
       <!-- ===== PROJECTS ===== -->
       <section id="projects" class="section section-alt">
         <div class="container">
-          <h2 class="section-title">Projecten</h2>
+          <h2 class="section-title">Activiteiten &amp; Projecten</h2>
           <p class="section-subtitle">
-            Een overzicht van projecten die ik heb gerealiseerd tijdens mijn
-            opleiding en in mijn vrije tijd.
+            Drie activiteiten die mijn professionele groei hebben vorm gegeven
+            en mijn passie voor IT tonen.
           </p>
-          <div class="cards-grid">
 
-            <article class="card">
-              <div class="card-header card-color-1">
-                <span class="card-icon">🌐</span>
+          <!-- FEATURED PROJECT -->
+          <article class="featured-project">
+            <div class="featured-content">
+              <span class="featured-badge">Passieproject</span>
+              <h3>PXL Gaming Hub / RBGH App</h3>
+              <p class="featured-description">
+                Mijn belangrijkste project: een applicatie gebouwd in
+                samenwerking met Ronan Stiers en Dries Bielen om de dagelijkse
+                werking van de PXL Gaming Hub te digitaliseren en
+                vereenvoudigen.
+              </p>
+              <div class="featured-details">
+                <div class="detail-item">
+                  <h4>Kernfunctionaliteiten:</h4>
+                  <ul>
+                    <li>
+                      <strong>Check-in systeem</strong> – Beheer van
+                      vrijwilligers en hun locaties met reminders
+                    </li>
+                    <li>
+                      <strong>Event management</strong> – Planning en
+                      registratie van activiteiten, toernooien en openingsuren
+                    </li>
+                    <li>
+                      <strong>User management</strong> – Rollen en permissies
+                      voor veilige en schaalbare werking
+                    </li>
+                    <li>
+                      <strong>RedBull Fridge</strong> – Voorraadtracking van
+                      verschillende RedBull edities
+                    </li>
+                    <li>
+                      <strong>Points systeem</strong> – Beloning van
+                      vrijwilligers voor hun inspanningen
+                    </li>
+                    <li>
+                      <strong>Spreadsheet export</strong> – Gegevens voor
+                      boekhouding en rapportering naar partners
+                    </li>
+                  </ul>
+                </div>
+                <div class="detail-item">
+                  <h4>Evolutie van het project:</h4>
+                  <p>
+                    <strong>V1 (2024):</strong> Flutter + Firebase backend –
+                    Eerste prototype met basis functionaliteiten.
+                  </p>
+                  <p>
+                    <strong>V2 (2025):</strong> Herbouw met eigen server en
+                    backend – Betere performance, meer features, schonere code
+                    architectuur.
+                  </p>
+                  <p>
+                    <strong>V3 (Heden):</strong> Derde herschrijving in C# met
+                    event-driven architecture – Volgt DDD-principes, agnostische
+                    services, sterke structuur voor langetermijnonderhoud.
+                  </p>
+                </div>
               </div>
-              <div class="card-body">
-                <h3>Portfolio Website</h3>
-                <p>
-                  Deze portfolio website gebouwd met pure HTML, CSS en
-                  JavaScript en gehost via GitHub Pages.
-                </p>
-                <ul class="tag-list">
-                  <li>HTML</li><li>CSS</li><li>JavaScript</li>
-                </ul>
-              </div>
-              <div class="card-footer">
+              <ul class="tag-list">
+                <li>Flutter</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Firebase</li>
+                <li>Backend Development</li>
+                <li>DevOps</li>
+                <li>Event-Driven</li>
+                <li>DDD</li>
+              </ul>
+              <div class="featured-footer">
                 <a
-                  href="https://github.com/MichaelBielenPXL/PortfolioSite"
+                  href="https://github.com/MichaelBielenPXL"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-sm"
-                >GitHub</a>
+                  class="btn btn-primary"
+                  >Bekijk op GitHub</a
+                >
               </div>
-            </article>
+            </div>
+            <div
+              class="featured-gallery"
+              aria-label="Screenshots van de PXL Gaming Hub app"
+            >
+            <img
+                src="shared/images/IMG_2221.jpg"
+                alt="PXL Gaming Hub checkin scherm"
+              />
+            <img
+                src="shared/images/IMG_2220.jpg"
+                alt="PXL Gaming Hub home scherm"
+              />
+            <img
+                src="shared/images/IMG_2222.jpg"
+                alt="PXL Gaming Hub Events"
+              />
+              <img
+                src="shared/images/signal-2026-05-07-110549.jpeg"
+                alt="PXL Gaming Hub instellingen"
+              />
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-header card-color-2">
-                <span class="card-icon">📱</span>
+          <!-- OTHER ACTIVITIES GRID -->
+          <div class="activities-grid">
+            <article class="activity-card">
+              <div class="activity-media-stack" aria-label="Duitslandreis foto's">
+                <img
+                  src="shared/images/IMG_2174.jpg"
+                  alt="PXL-Digital op de Hannover Messe in Duitsland"
+                />
+                <img
+                  src="shared/images/IMG_2158.jpg"
+                  alt="Robot op de Hannover Messe in Duitsland"
+                />
               </div>
-              <div class="card-body">
-                <h3>Project 2</h3>
+              <div class="activity-body">
+                <h3>Studiereis Duitsland 2026</h3>
+                <span class="activity-date">22–26 april 2026</span>
                 <p>
-                  Omschrijving van een volgend project. Voeg hier de details
-                  toe zodra het project gereed is.
+                  Een vijfdaagse reis door Duitsland met PXL-Digital: Bielefeld
+                  (Hochschule bezoek), Hannover (Messe – AI, robotica, Industry
+                  4.0), Magdeburg en Berlijn (Chaos Computer Club – digital
+                  independence en open source).
                 </p>
-                <ul class="tag-list">
-                  <li>Java</li><li>Spring Boot</li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <a href="#projects" class="btn btn-sm btn-disabled">Binnenkort</a>
+                <div class="activity-highlights">
+                  <strong>Hoogtepunten:</strong>
+                  <ul>
+                    <li>Gigantische Hannover Messe met duizenden bedrijven</li>
+                    <li>
+                      Chaos Computer Club – inspirerend over zelfhosting en
+                      digitale onafhankelijkheid
+                    </li>
+                    <li>Boulderen in BertaBlock, Berlijn met vrienden</li>
+                    <li>
+                      Cultureel verrijkt met nieuwe steden en tech community
+                    </li>
+                  </ul>
+                </div>
               </div>
             </article>
 
-            <article class="card">
-              <div class="card-header card-color-3">
-                <span class="card-icon">🛠️</span>
+            <article class="activity-card">
+              <div class="activity-header card-color-3">
+                <span class="activity-icon">🎓</span>
               </div>
-              <div class="card-body">
-                <h3>Project 3</h3>
+              <div class="activity-body">
+                <h3>Innovatieroute: Domain Driven Design</h3>
+                <span class="activity-date">oktober 2025 – 3 sessies</span>
                 <p>
-                  Omschrijving van een volgend project. Voeg hier de details
-                  toe zodra het project gereed is.
+                  Workshops over Domain Driven Design met focus op strategische
+                  en tactische bouwstenen: Event Storming, bounded contexts,
+                  value objects, aggregates, event-driven communicatie en
+                  hexagonal architecture.
                 </p>
-                <ul class="tag-list">
-                  <li>React</li><li>Node.js</li>
-                </ul>
-              </div>
-              <div class="card-footer">
-                <a href="#projects" class="btn btn-sm btn-disabled">Binnenkort</a>
+                <div class="activity-highlights">
+                  <strong>Kernconcepten:</strong>
+                  <ul>
+                    <li>
+                      Event Storming voor process visualisatie en ubiquitous
+                      language
+                    </li>
+                    <li>Value Objects vs Entities – sterke domain typing</li>
+                    <li>Aggregates en domain events voor losse koppeling</li>
+                    <li>
+                      Layered/Hexagonal architectuur voor onderhoudbare systemen
+                    </li>
+                  </ul>
+                </div>
               </div>
             </article>
-
           </div>
         </div>
       </section>
@@ -164,21 +279,20 @@
       <!-- ===== SEMINARIES ===== -->
       <section id="seminaries" class="section">
         <div class="container">
-          <h2 class="section-title">Seminaries</h2>
+          <h2 class="section-title">Seminaries &amp; Workshops</h2>
           <p class="section-subtitle">
-            Gastlezingen, workshops en events die ik heb bijgewoond om mijn
-            vakkennis te verbreden.
+            Gastlezingen en workshops van gerenommeerde bedrijven en experts uit
+            de industrie.
           </p>
           <div class="timeline">
-
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-date">2024 – 2025</span>
-                <h3>Seminarie 1</h3>
+                <span class="timeline-date">01/04/2025</span>
+                <h3>Seminarie Politie – Digitaal onderzoek</h3>
                 <p>
-                  Vul hier de naam en omschrijving in van het eerste seminarie
-                  dat je hebt bijgewoond.
+                  Forensics, cybercrime, crypto-assets en data-analyse. Inzicht
+                  in hoe de politie digitale criminaliteit aanpakt.
                 </p>
               </div>
             </div>
@@ -186,11 +300,11 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-date">2024 – 2025</span>
-                <h3>Seminarie 2</h3>
+                <span class="timeline-date">22/04/2025</span>
+                <h3>Seminarie Ericsson – Mobile Networks</h3>
                 <p>
-                  Vul hier de naam en omschrijving in van het tweede seminarie
-                  dat je hebt bijgewoond.
+                  Van 5G naar 6G: hoe volgende generatie netwerken werken en wat
+                  6G gaat betekenen voor connectiviteit.
                 </p>
               </div>
             </div>
@@ -198,15 +312,75 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-date">2024 – 2025</span>
-                <h3>Seminarie 3</h3>
+                <span class="timeline-date">29/04/2025</span>
+                <h3>Seminarie ACA Group – ReactJS Intro</h3>
                 <p>
-                  Vul hier de naam en omschrijving in van het derde seminarie
-                  dat je hebt bijgewoond.
+                  Introductie tot React framework voor moderne frontend
+                  development en componentgebaseerde architectuur.
                 </p>
               </div>
             </div>
 
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">06/05/2025</span>
+                <h3>Seminarie Appfoundry – 3D Rendering in Browser</h3>
+                <p>
+                  Van low- tot high-fidelity 3D rendering in webbrowsers.
+                  Technieken voor interactieve 3D-ervaringen.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">05/11/2025</span>
+                <h3>Seminarie Brightest – BDD &amp; ATDD</h3>
+                <p>
+                  Behavior-Driven Development en Acceptance Test-Driven
+                  Development. Beter communiceren tussen development en
+                  business.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">26/11/2025</span>
+                <h3>Seminarie Refleqt – AI in Postman</h3>
+                <p>
+                  Hoe AI integreert in API development tools. Automatisatie en
+                  intelligente features in Postman.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">10/12/2025</span>
+                <h3>Seminarie Inetum – Enterprise UX</h3>
+                <p>
+                  De wereld van User Experience design in enterprise-omgevingen.
+                  Best practices voor schaalbare UX-architectuur.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">17/12/2025</span>
+                <h3>Seminarie Cegeka – Open Source</h3>
+                <p>
+                  Voordelen en praktijk van open source software in enterprise.
+                  Contribueren aan open source projecten.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -220,19 +394,16 @@
           </p>
           <div class="contact-links">
             <a
-              href="mailto:michael.bielen@student.pxl.be"
-              class="contact-card"
-            >
-              <span class="contact-icon">✉️</span>
-              <span>E-mail</span>
-            </a>
-            <a
               href="https://github.com/MichaelBielenPXL"
               target="_blank"
               rel="noopener noreferrer"
               class="contact-card"
             >
-              <span class="contact-icon">🐙</span>
+              <img
+                src="shared/images/githubLogo.png"
+                alt="GitHub logo"
+                class="contact-logo"
+              />
               <span>GitHub</span>
             </a>
             <a
@@ -241,7 +412,11 @@
               rel="noopener noreferrer"
               class="contact-card"
             >
-              <span class="contact-icon">💼</span>
+              <img
+                src="shared/images/linkedinLogo.png"
+                alt="LinkedIn logo"
+                class="contact-logo"
+              />
               <span>LinkedIn</span>
             </a>
           </div>
@@ -251,7 +426,10 @@
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Michael Bielen – Alle rechten voorbehouden.</p>
+      <p>
+        &copy; <span id="year"></span> Michael Bielen – Alle rechten
+        voorbehouden.
+      </p>
     </footer>
 
     <script src="js/main.js"></script>
