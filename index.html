@@ -3,433 +3,502 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Bielen – Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Google Fonts -->
+    <title>Michaël Bielen · Software Engineer</title>
+    <meta
+      name="description"
+      content="Michaël Bielen – Software Engineer uit Sint-Truiden. Full-stack development met C#/.NET, web technologies en SQL. Webapplicaties, websites en API's op maat."
+    />
+    <meta property="og:title" content="Michaël Bielen · Software Engineer" />
+    <meta property="og:description" content="Full-stack development met C#/.NET, web technologies en SQL." />
+    <meta property="og:image" content="https://michaelbielen.be/shared/images/selfie.jpg" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
   <body>
-    <!-- ===== NAVIGATION ===== -->
+    <a class="skip-link" href="#main">Naar inhoud</a>
+
     <header class="site-header">
-      <nav class="navbar">
-        <a href="#hero" class="nav-logo">MB</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
-          <span></span><span></span><span></span>
+      <nav class="navbar container" aria-label="Hoofdnavigatie">
+        <a href="#top" class="nav-logo"><span class="nav-mark">MB</span> Michaël Bielen</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
         </button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#about">Over mij</a></li>
-          <li><a href="#projects">Projecten</a></li>
-          <li><a href="#seminaries">Seminaries</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#over">Over</a></li>
+          <li><a href="#diensten">Diensten</a></li>
+          <li><a href="#projecten">Projecten</a></li>
+          <li><a href="#ervaring">Ervaring</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <!-- ===== HERO ===== -->
-      <section id="hero" class="hero">
-        <div class="hero-content">
-          <p class="hero-greeting">Hallo, ik ben</p>
-          <h1 class="hero-name">Michael Bielen</h1>
-          <p class="hero-tagline">Student Toegepaste Informatica · PXL</p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">Bekijk projecten</a>
-            <a href="#contact" class="btn btn-outline">Neem contact op</a>
+      <section id="top" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="status"><span class="status-dot" aria-hidden="true"></span>Beschikbaar voor nieuwe opdrachten</p>
+            <h1>Software engineer.<br /><span class="muted">C#, .NET en het web.</span></h1>
+            <p class="lead">
+              Ik bouw webapplicaties, API's en backends die schaalbaar en onderhoudbaar
+              blijven, van de eerste analyse tot de oplevering.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Neem contact op</a>
+              <a href="#projecten" class="btn btn-ghost">Bekijk projecten</a>
+            </div>
           </div>
+          <figure class="hero-portrait">
+            <img src="shared/images/selfie.jpg" alt="Portret van Michaël Bielen" width="419" height="408" />
+            <figcaption>
+              <strong>Michaël Bielen</strong>
+              <span>Sint-Truiden, België</span>
+            </figcaption>
+          </figure>
         </div>
-        <div class="hero-decoration" aria-hidden="true"></div>
+
+        <div class="container">
+          <dl class="facts">
+            <div><dt>Nu</dt><dd>Zelfstandig developer</dd></div>
+            <div><dt>Eerder</dt><dd>Zeta Global · Beego</dd></div>
+            <div><dt>Opleiding</dt><dd>Bachelor Toegepaste Informatica, PXL</dd></div>
+            <div><dt>Talen</dt><dd>Nederlands · Engels · Frans</dd></div>
+          </dl>
+        </div>
       </section>
 
-      <!-- ===== ABOUT ME ===== -->
-      <section id="about" class="section">
-        <div class="container">
-          <h2 class="section-title">Over mij</h2>
-          <div class="about-grid">
-            <div class="about-avatar">
-              <img src="shared/images/selfie.jpg" alt="Michael Bielen" class="avatar-img" />
-            </div>
-            <div class="about-text">
-              <p>
-                Hallo! Ik ben <strong>Michael Bielen</strong>, een student
-                <strong>Toegepaste Informatica</strong> aan
-                <strong>PXL University of Applied Sciences &amp; Arts</strong>
-                in Hasselt, België.
-              </p>
-              <p>
-                Mijn passie ligt sterk bij programmeren. Ik hou ervan om
-                applicaties te bouwen zonder bouwmaterialen – alleen met mijn
-                laptop kan ik bijna elke applicatie realiseren die ik wil.
-                Buiten programmeren geniet ik van boulderen met vrienden en ben
-                ik geïnteresseerd in IT-disciplines zoals robotica, elektronica
-                en netwerken. Ik run zelfs een kleine homelab thuis waar ik met
-                netwerken en infrastructuur experimenteer.
-              </p>
-              <p>
-                Over vijf jaar hoop ik ofwel freelance te werken met meer
-                vrijheid in mijn uren, ofwel samen met mijn broer een klein
-                softwarebedrijf op te starten. Ik ben ook gepassioneerd over AI
-                en wil hier veel meer ervaring mee opdoen.
-              </p>
-              <ul class="skill-tags">
-                <li>Java</li>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>Flutter</li>
-                <li>React</li>
-                <li>Spring Boot</li>
-                <li>.NET</li>
-                <li>SQL</li>
-                <li>Docker</li>
-                <li>Event-Driven Architecture</li>
-                <li>Domain Driven Design</li>
-                <li>DevOps</li>
-              </ul>
-            </div>
+      <!-- ===== ABOUT ===== -->
+      <section id="over" class="section">
+        <div class="container split">
+          <header class="section-label">
+            <span class="index">01</span>
+            <h2>Over mij</h2>
+          </header>
+          <div class="prose">
+            <p class="prose-lead">
+              Full-stack developer met een voorkeur voor de backend: duidelijke
+              domeinmodellen, goede API's en architectuur die meegroeit met het product.
+            </p>
+            <p>
+              Ik studeerde in 2026 af als Bachelor Toegepaste Informatica aan Hogeschool PXL,
+              met een specialisatie in applicatieontwikkeling. Mijn grootste project,
+              de <strong>Red Bull Gaming Hub</strong>, heb ik drie keer herschreven: van een
+              Flutter- en Firebase-prototype tot een .NET Aspire microservices-platform
+              volgens Domain Driven Design. Tijdens mijn stage bij <strong>Zeta Global</strong>
+              paste ik event-driven principes toe in een enterprise-omgeving op AWS.
+            </p>
+            <p>
+              Naast mijn studies werkte ik bijna drie jaar als IT-consultant bij Beego, waar ik
+              klanten van de ING-app hielp met technische problemen en integraties met itsme en
+              Homebank. Zo leerde ik technische problemen uitleggen in mensentaal.
+            </p>
+            <p>
+              Buiten het werk draai ik een homelab om te experimenteren met netwerken en
+              self-hosting, verdiep ik me in open source en AI, en ga ik geregeld
+              boulderen met vrienden.
+            </p>
           </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES ===== -->
+      <section id="diensten" class="section section-alt">
+        <div class="container">
+          <header class="section-label section-label-wide">
+            <span class="index">02</span>
+            <h2>Wat ik doe</h2>
+            <p>Als zelfstandige neem ik het volledige traject op: analyse, klantcontact, ontwikkeling en oplevering.</p>
+          </header>
+
+          <div class="services">
+            <article class="service">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/></svg>
+              <h3>Webapplicaties op maat</h3>
+              <p>Interne tools en platformen met gebruikersbeheer, rollen, planning en rapportering, gebouwd op C#/.NET en SQL.</p>
+            </article>
+            <article class="service">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+              <h3>Websites</h3>
+              <p>Snelle, onderhoudbare websites voor verenigingen en kmo's, met agenda, webshop of ledenlogin waar nodig.</p>
+            </article>
+            <article class="service">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+              <h3>Backend &amp; API's</h3>
+              <p>REST API's, microservices en integraties met bestaande systemen, met CQRS, event-driven en DDD als dat past.</p>
+            </article>
+            <article class="service">
+              <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-7.96A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/></svg>
+              <h3>Cloud &amp; DevOps</h3>
+              <p>Containerisatie met Docker, CI/CD-pipelines in Azure DevOps en deployment op Azure of AWS.</p>
+            </article>
+          </div>
+
+          <ol class="process" aria-label="Werkwijze">
+            <li><span>01</span><strong>Analyse</strong>Samen het probleem en de doelen scherp krijgen.</li>
+            <li><span>02</span><strong>Ontwerp</strong>Domeinmodel, architectuur en een duidelijke planning.</li>
+            <li><span>03</span><strong>Bouw</strong>Korte iteraties met regelmatige demo's en feedback.</li>
+            <li><span>04</span><strong>Oplevering</strong>Deployment, documentatie en ondersteuning achteraf.</li>
+          </ol>
         </div>
       </section>
 
       <!-- ===== PROJECTS ===== -->
-      <section id="projects" class="section section-alt">
+      <section id="projecten" class="section">
         <div class="container">
-          <h2 class="section-title">Activiteiten &amp; Projecten</h2>
-          <p class="section-subtitle">
-            Drie activiteiten die mijn professionele groei hebben vorm gegeven
-            en mijn passie voor IT tonen.
-          </p>
+          <header class="section-label section-label-wide">
+            <span class="index">03</span>
+            <h2>Projecten</h2>
+            <p>Een selectie van platformen en websites die ik bouwde, alleen of in team.</p>
+          </header>
 
-          <!-- FEATURED PROJECT -->
-          <article class="featured-project">
-            <div class="featured-content">
-              <span class="featured-badge">Passieproject</span>
-              <h3>PXL Gaming Hub / RBGH App</h3>
-              <p class="featured-description">
-                Mijn belangrijkste project: een applicatie gebouwd in
-                samenwerking met Ronan Stiers en Dries Bielen om de dagelijkse
-                werking van de PXL Gaming Hub te digitaliseren en
-                vereenvoudigen.
-              </p>
-              <div class="featured-details">
-                <div class="detail-item">
-                  <h4>Kernfunctionaliteiten:</h4>
-                  <ul>
-                    <li>
-                      <strong>Check-in systeem</strong> – Beheer van
-                      vrijwilligers en hun locaties met reminders
-                    </li>
-                    <li>
-                      <strong>Event management</strong> – Planning en
-                      registratie van activiteiten, toernooien en openingsuren
-                    </li>
-                    <li>
-                      <strong>User management</strong> – Rollen en permissies
-                      voor veilige en schaalbare werking
-                    </li>
-                    <li>
-                      <strong>RedBull Fridge</strong> – Voorraadtracking van
-                      verschillende RedBull edities
-                    </li>
-                    <li>
-                      <strong>Points systeem</strong> – Beloning van
-                      vrijwilligers voor hun inspanningen
-                    </li>
-                    <li>
-                      <strong>Spreadsheet export</strong> – Gegevens voor
-                      boekhouding en rapportering naar partners
-                    </li>
-                  </ul>
-                </div>
-                <div class="detail-item">
-                  <h4>Evolutie van het project:</h4>
-                  <p>
-                    <strong>V1 (2024):</strong> Flutter + Firebase backend –
-                    Eerste prototype met basis functionaliteiten.
-                  </p>
-                  <p>
-                    <strong>V2 (2025):</strong> Herbouw met eigen server en
-                    backend – Betere performance, meer features, schonere code
-                    architectuur.
-                  </p>
-                  <p>
-                    <strong>V3 (Heden):</strong> Derde herschrijving in C# met
-                    event-driven architecture – Volgt DDD-principes, agnostische
-                    services, sterke structuur voor langetermijnonderhoud.
-                  </p>
-                </div>
+          <!-- Case study -->
+          <article class="case">
+            <div class="case-head">
+              <div>
+                <p class="kicker">Case study · in partnership met Red Bull</p>
+                <h3>PxlGaming: Red Bull Gaming Hub</h3>
               </div>
-              <ul class="tag-list">
-                <li>Flutter</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>Firebase</li>
-                <li>Backend Development</li>
-                <li>DevOps</li>
-                <li>Event-Driven</li>
-                <li>DDD</li>
+              <ul class="tags" aria-label="Technologieën">
+                <li>C#</li><li>.NET Aspire</li><li>YARP</li><li>CQRS</li><li>MediatR</li><li>Docker</li><li>Flutter</li>
               </ul>
-              <div class="featured-footer">
-                <a
-                  href="https://github.com/MichaelBielenPXL"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-primary"
-                  >Bekijk op GitHub</a
-                >
+            </div>
+
+            <div class="case-grid">
+              <div class="case-col">
+                <h4>De uitdaging</h4>
+                <p>
+                  De PXL Gaming Hub draait op vrijwilligers. Shifts, evenementen, beloningen en de
+                  Red Bull-voorraad werden manueel bijgehouden, en de partners verwachtten correcte rapportering.
+                </p>
+              </div>
+              <div class="case-col">
+                <h4>De oplossing</h4>
+                <p>
+                  Een mobiele app en backend die de volledige werking digitaliseert: inchecken
+                  met locatie en reminders, evenementen en openingsuren plannen, punten toekennen,
+                  voorraad per editie bijhouden en exports maken voor de boekhouding.
+                </p>
+              </div>
+              <div class="case-col">
+                <h4>Het team</h4>
+                <p>Gebouwd samen met Ronan Stiers en Dries Bielen.</p>
               </div>
             </div>
-            <div
-              class="featured-gallery"
-              aria-label="Screenshots van de PXL Gaming Hub app"
-            >
-            <img
-                src="shared/images/IMG_2221.jpg"
-                alt="PXL Gaming Hub checkin scherm"
-              />
-            <img
-                src="shared/images/IMG_2220.jpg"
-                alt="PXL Gaming Hub home scherm"
-              />
-            <img
-                src="shared/images/IMG_2222.jpg"
-                alt="PXL Gaming Hub Events"
-              />
-              <img
-                src="shared/images/signal-2026-05-07-110549.jpeg"
-                alt="PXL Gaming Hub instellingen"
-              />
+
+            <figure class="diagram">
+              <svg viewBox="-2 0 884 300" role="img" aria-labelledby="diagTitle">
+                <title id="diagTitle">Architectuur: de app praat met een YARP API-gateway die doorstuurt naar zes .NET-services, gekoppeld via Aspire service discovery.</title>
+                <g class="d-node">
+                  <rect x="340" y="10" width="200" height="48" rx="8"/>
+                  <text x="440" y="39">Flutter-app</text>
+                </g>
+                <path class="d-line" d="M440 58v34"/>
+                <g class="d-node d-accent">
+                  <rect x="300" y="92" width="280" height="56" rx="8"/>
+                  <text x="440" y="117">YARP API-gateway</text>
+                  <text class="d-sub" x="440" y="136">URL-path routing</text>
+                </g>
+                <path class="d-line" d="M440 148v22M65 170h750M65 170v22M215 170v22M365 170v22M515 170v22M665 170v22M815 170v22"/>
+                <g class="d-node"><rect x="0" y="192" width="130" height="48" rx="8"/><text x="65" y="221">Activities</text><rect x="150" y="192" width="130" height="48" rx="8"/><text x="215" y="221">Check-in</text><rect x="300" y="192" width="130" height="48" rx="8"/><text x="365" y="221">Points</text><rect x="450" y="192" width="130" height="48" rx="8"/><text x="515" y="221">Auth</text><rect x="600" y="192" width="130" height="48" rx="8"/><text x="665" y="221">Security</text><rect x="750" y="192" width="130" height="48" rx="8"/><text x="815" y="221">Stock</text></g>
+                <rect class="d-band" x="0" y="256" width="880" height="34" rx="8"/>
+                <text class="d-sub" x="440" y="278">.NET Aspire · service discovery · CQRS, Repository &amp; MediatR per service</text>
+              </svg>
+            </figure>
+
+            <div class="case-bottom">
+              <ol class="evolution" aria-label="Evolutie van het project">
+                <li><span>V1 · 2024</span><strong>Prototype</strong>Flutter en Firebase, de basisfunctionaliteit om de hub te ondersteunen.</li>
+                <li><span>V2 · 2025</span><strong>Eigen backend</strong>Eigen server: betere performance, meer features en schonere code.</li>
+                <li><span>V3 · nu</span><strong>Microservices</strong>Herschreven in C# met event-driven architectuur volgens DDD.</li>
+              </ol>
+
+              <div class="gallery" aria-label="Screenshots van de PxlGaming app">
+                <figure><img src="shared/images/IMG_2220.jpg" alt="Check-in overzicht met actieve vrijwilligers" loading="lazy" width="947" height="2048" /><figcaption>Check-in</figcaption></figure>
+                <figure><img src="shared/images/IMG_2222.jpg" alt="Evenementenkalender met openingen" loading="lazy" width="947" height="2048" /><figcaption>Events</figcaption></figure>
+                <figure><img src="shared/images/signal-2026-05-07-092630.jpeg" alt="Puntensysteem voor vrijwilligers" loading="lazy" width="947" height="2048" /><figcaption>Punten</figcaption></figure>
+                <figure><img src="shared/images/IMG_2228.jpg" alt="Red Bull Fridge voorraadbeheer" loading="lazy" width="947" height="2048" /><figcaption>Voorraad</figcaption></figure>
+              </div>
             </div>
           </article>
 
-          <!-- OTHER ACTIVITIES GRID -->
-          <div class="activities-grid">
-            <article class="activity-card">
-              <div class="activity-media-stack" aria-label="Duitslandreis foto's">
-                <img
-                  src="shared/images/IMG_2174.jpg"
-                  alt="PXL-Digital op de Hannover Messe in Duitsland"
-                />
-                <img
-                  src="shared/images/IMG_2158.jpg"
-                  alt="Robot op de Hannover Messe in Duitsland"
-                />
+          <!-- Case study: MyTickets -->
+          <article class="case">
+            <div class="case-head">
+              <div>
+                <p class="kicker">Eigen product · in ontwikkeling <em class="badge">2026</em></p>
+                <h3>MyTickets: tickets, tegoed en NFC voor feestorganisaties</h3>
               </div>
-              <div class="activity-body">
-                <h3>Studiereis Duitsland 2026</h3>
-                <span class="activity-date">22–26 april 2026</span>
-                <p>
-                  Een vijfdaagse reis door Duitsland met PXL-Digital: Bielefeld
-                  (Hochschule bezoek), Hannover (Messe – AI, robotica, Industry
-                  4.0), Magdeburg en Berlijn (Chaos Computer Club – digital
-                  independence en open source).
-                </p>
-                <div class="activity-highlights">
-                  <strong>Hoogtepunten:</strong>
-                  <ul>
-                    <li>Gigantische Hannover Messe met duizenden bedrijven</li>
-                    <li>
-                      Chaos Computer Club – inspirerend over zelfhosting en
-                      digitale onafhankelijkheid
-                    </li>
-                    <li>Boulderen in BertaBlock, Berlijn met vrienden</li>
-                    <li>
-                      Cultureel verrijkt met nieuwe steden en tech community
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
+              <ul class="tags" aria-label="Technologieën">
+                <li>.NET 10</li><li>EF Core</li><li>React</li><li>TypeScript</li><li>Stripe Connect</li><li>Redis</li><li>Docker</li>
+              </ul>
+            </div>
 
-            <article class="activity-card">
-              <div class="activity-header card-color-3">
-                <span class="activity-icon">🎓</span>
-              </div>
-              <div class="activity-body">
-                <h3>Innovatieroute: Domain Driven Design</h3>
-                <span class="activity-date">oktober 2025 – 3 sessies</span>
+            <div class="case-grid">
+              <div class="case-col">
+                <h4>Het idee</h4>
                 <p>
-                  Workshops over Domain Driven Design met focus op strategische
-                  en tactische bouwstenen: Event Storming, bounded contexts,
-                  value objects, aggregates, event-driven communicatie en
-                  hexagonal architecture.
+                  Bestaande ticketingdiensten zijn duur voor kleine organisaties zoals clubs en
+                  studentenverenigingen. MyTickets is een betaalbaar, zelf gehost alternatief
+                  dat ticketverkoop, leden en betalingen aan de bar samenbrengt.
                 </p>
-                <div class="activity-highlights">
-                  <strong>Kernconcepten:</strong>
-                  <ul>
-                    <li>
-                      Event Storming voor process visualisatie en ubiquitous
-                      language
-                    </li>
-                    <li>Value Objects vs Entities – sterke domain typing</li>
-                    <li>Aggregates en domain events voor losse koppeling</li>
-                    <li>
-                      Layered/Hexagonal architectuur voor onderhoudbare systemen
-                    </li>
-                  </ul>
-                </div>
               </div>
+              <div class="case-col">
+                <h4>Hoe het werkt</h4>
+                <p>
+                  Organisaties krijgen een eigen pagina waar gasten zich registreren, tickets kopen
+                  en tegoed opladen. Een NFC-kaart gekoppeld aan hun account opent de deur en betaalt
+                  aan de bar, met tegoed dat per organisatie apart blijft.
+                </p>
+              </div>
+              <div class="case-col">
+                <h4>Mijn rol</h4>
+                <p>
+                  Solo gebouwd van productidee tot deployment: domeinmodel, API, frontend,
+                  betalingsflow, tests en de self-hosted infrastructuur.
+                </p>
+              </div>
+            </div>
+
+            <figure class="diagram">
+              <svg viewBox="0 0 880 250" role="img" aria-labelledby="mtTitle">
+                <title id="mtTitle">Architectuur van MyTickets: een React-app praat via nginx met een .NET API. De API gebruikt een aparte SQLite-database per organisatie, plus Redis, RustFS-opslag en Stripe Connect.</title>
+                <g class="d-node">
+                  <rect x="0" y="20" width="190" height="56" rx="8"/>
+                  <text x="95" y="45">React-app</text>
+                  <text class="d-sub" x="95" y="64">PWA · gasten &amp; staff</text>
+                </g>
+                <path class="d-line" d="M190 48h45"/>
+                <g class="d-node">
+                  <rect x="235" y="20" width="140" height="56" rx="8"/>
+                  <text x="305" y="45">nginx</text>
+                  <text class="d-sub" x="305" y="64">site + /api</text>
+                </g>
+                <path class="d-line" d="M375 48h45"/>
+                <g class="d-node d-accent">
+                  <rect x="420" y="20" width="200" height="56" rx="8"/>
+                  <text x="520" y="45">.NET API</text>
+                  <text class="d-sub" x="520" y="64">minimal APIs · outbox</text>
+                </g>
+                <path class="d-line" d="M620 48h30M650 21v60M650 21h30M650 51h30M650 81h30"/>
+                <g class="d-node">
+                  <rect x="680" y="8" width="200" height="26" rx="6"/><text class="d-sm" x="780" y="25">Stripe Connect</text>
+                  <rect x="680" y="38" width="200" height="26" rx="6"/><text class="d-sm" x="780" y="55">Redis-cache</text>
+                  <rect x="680" y="68" width="200" height="26" rx="6"/><text class="d-sm" x="780" y="85">RustFS-opslag (S3)</text>
+                </g>
+                <path class="d-line" d="M520 76v40M155 116h570M155 116v20M345 116v20M535 116v20M725 116v20"/>
+                <g class="d-node">
+                  <rect x="70" y="136" width="170" height="48" rx="8"/><text x="155" y="165">platform.db</text>
+                  <rect x="260" y="136" width="170" height="48" rx="8"/><text x="345" y="165">organisatie A.db</text>
+                  <rect x="450" y="136" width="170" height="48" rx="8"/><text x="535" y="165">organisatie B.db</text>
+                  <rect x="640" y="136" width="170" height="48" rx="8"/><text x="725" y="165">organisatie ….db</text>
+                </g>
+                <rect class="d-band" x="70" y="200" width="740" height="34" rx="8"/>
+                <text class="d-sub" x="440" y="222">één database per organisatie: gegevens volledig gescheiden, back-up = één map</text>
+              </svg>
+            </figure>
+
+            <div class="case-bottom">
+              <div>
+                <h4 class="sub-title">Wat het kan</h4>
+                <ul class="feature-list">
+                  <li><strong>Events &amp; tickets</strong>Vaste capaciteit, tickettypes en toegang per lidmaatschap. Tickets komen als pdf in je mailbox.</li>
+                  <li><strong>Lidmaatschappen</strong>Tiers met einddatum, aanvragen met goedkeuring en een digitale ledenpas.</li>
+                  <li><strong>Tegoed per organisatie</strong>Een wallet per organisatie, opladen met top-up deals.</li>
+                  <li><strong>NFC aan deur en bar</strong>Kaart tikken via Web NFC op Android, of het kaartnummer intypen.</li>
+                  <li><strong>Kassa</strong>Barmenu met categorieën, kleuren en statiegeld per drankje.</li>
+                  <li><strong>Uitbetalingen</strong>Stripe Connect betaalt organisaties automatisch uit, met een begrensde platformfee.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="sub-title">Technische keuzes</h4>
+                <dl class="stack-list">
+                  <div><dt>Backend</dt><dd>.NET 10 minimal APIs, EF Core en SQLite, georkestreerd met .NET Aspire</dd></div>
+                  <div><dt>Betrouwbaarheid</dt><dd>Transactional outbox: na een betaling worden uitbetaling en ticketmail in dezelfde transactie vastgelegd en met retries afgehandeld</dd></div>
+                  <div><dt>Frontend</dt><dd>React, TypeScript en Vite met TanStack Query. Feature-gebaseerde mappen met een lintregel die de grenzen bewaakt</dd></div>
+                  <div><dt>Tests</dt><dd>End-to-end tests van de geld-, ticket- en kaartflows. Vitest, React Testing Library en MSW in de frontend</dd></div>
+                  <div><dt>Hosting</dt><dd>Eén Docker Compose-stack op eigen server via Coolify, achter een Cloudflare Tunnel</dd></div>
+                </dl>
+              </div>
+            </div>
+          </article>
+
+          <!-- Other projects -->
+          <h3 class="list-title">Websites</h3>
+          <div class="site-grid">
+            <article class="site-card">
+              <a href="https://mercuriushasselt.be" target="_blank" rel="noopener noreferrer">
+                <div class="browser">
+                  <div class="browser-bar"><span></span><span></span><span></span><em>mercuriushasselt.be</em></div>
+                  <img src="shared/images/previews/mercurius.jpg" alt="Homepage van Mercurius Hasselt" loading="lazy" width="1200" height="750" />
+                </div>
+                <div class="site-body">
+                  <h4>Mercurius Hasselt <span class="pr-arrow" aria-hidden="true">↗</span></h4>
+                  <p>Platform voor de studentenvereniging van PXL-Business met praesidium-archief per academiejaar, agenda, webshop en ledenlogin.</p>
+                  <p class="pr-stack">Symfony · Twig · Tailwind · PostgreSQL</p>
+                </div>
+              </a>
             </article>
+            <article class="site-card">
+              <a href="https://hexion.pxl.be" target="_blank" rel="noopener noreferrer">
+                <div class="browser">
+                  <div class="browser-bar"><span></span><span></span><span></span><em>hexion.pxl.be</em></div>
+                  <img src="shared/images/previews/hexion.jpg" alt="Homepage van Hexion" loading="lazy" width="1200" height="750" />
+                </div>
+                <div class="site-body">
+                  <h4>Hexion <span class="pr-arrow" aria-hidden="true">↗</span></h4>
+                  <p>Website voor studentenvereniging Hexion met praesidium, sponsors, verenigingsinfo en evenementen.</p>
+                  <p class="pr-stack">Nuxt · Plesk</p>
+                </div>
+              </a>
+            </article>
+            <article class="site-card">
+              <a href="https://moederkanarie.be" target="_blank" rel="noopener noreferrer">
+                <div class="browser">
+                  <div class="browser-bar"><span></span><span></span><span></span><em>moederkanarie.be</em></div>
+                  <img src="shared/images/previews/moederkanarie.jpg" alt="Homepage van Moeder Kanarie" loading="lazy" width="1200" height="750" />
+                </div>
+                <div class="site-body">
+                  <h4>Moeder Kanarie <span class="pr-arrow" aria-hidden="true">↗</span></h4>
+                  <p>Website voor de Sint-Truidense stadsclub in Hasselt en Leuven: cantussen, clubavonden en zaalvoetbal.</p>
+                  <p class="pr-stack">Website</p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <h3 class="list-title">Onderzoek</h3>
+          <ul class="project-list">
+            <li class="project-row">
+              <div>
+                <span class="pr-name">Smart scaling van e-mailbeleid</span>
+                <span class="pr-desc">Bachelorproef met Selligent en Hogeschool PXL: onderzoek naar per-sender-domain versus per-domain-cluster strategieën.</span>
+                <span class="pr-stack">Onderzoek · Selligent</span>
+                <span class="pr-arrow" aria-hidden="true"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="ervaring" class="section section-alt">
+        <div class="container split">
+          <header class="section-label">
+            <span class="index">04</span>
+            <h2>Ervaring</h2>
+          </header>
+
+          <div>
+            <ol class="roles">
+              <li class="role">
+                <div class="role-top">
+                  <h3>Zelfstandig Software Developer</h3>
+                  <span class="role-when">Okt 2026 – heden</span>
+                </div>
+                <p class="role-org">Eenmanszaak · Sint-Truiden</p>
+                <p>Web- en softwareoplossingen op maat voor klanten met C#/.NET, web technologies en SQL. Volledige verantwoordelijkheid van analyse en klantcontact tot oplevering.</p>
+              </li>
+              <li class="role">
+                <div class="role-top">
+                  <h3>Stagiair Software Engineering</h3>
+                  <span class="role-when">Feb – Jun 2026</span>
+                </div>
+                <p class="role-org">Zeta Global · Hasselt</p>
+                <p>Backend development in een enterprise-omgeving. Event-driven principes toegepast in echte applicaties, met AWS cloud-services, in een Agile/Scrum-team.</p>
+              </li>
+              <li class="role">
+                <div class="role-top">
+                  <h3>IT Consultant</h3>
+                  <span class="role-when">Nov 2023 – Sep 2026</span>
+                </div>
+                <p class="role-org">Beego · Limburg</p>
+                <p>Technische support en troubleshooting voor de ING bank-applicatie. Support bij systeemintegratie met itsme en Homebank, en rechtstreekse klantcommunicatie.</p>
+              </li>
+              <li class="role">
+                <div class="role-top">
+                  <h3>Stagiair IT Infrastructure</h3>
+                  <span class="role-when">Feb 2023</span>
+                </div>
+                <p class="role-org">RZ Heilig Hart · Tienen</p>
+                <p>Infrastructuursupport en troubleshooting in een ziekenhuisomgeving. Opzet van een Disaster Recovery-server.</p>
+              </li>
+            </ol>
+
+            <div class="edu">
+              <h3>Opleiding &amp; bijscholing</h3>
+              <ul>
+                <li>
+                  <strong>Bachelor of Science, Toegepaste Informatica</strong>
+                  <span>Hogeschool PXL, Hasselt · 2026 · specialisatie applicatieontwikkeling</span>
+                </li>
+                <li>
+                  <strong>Innovatieroute Domain Driven Design</strong>
+                  <span>Event Storming, bounded contexts, aggregates, hexagonal architecture · 2025</span>
+                </li>
+                <li>
+                  <strong>Studiereis Duitsland</strong>
+                  <span>Hannover Messe (AI, robotica, Industry 4.0) en Chaos Computer Club, Berlijn · 2026</span>
+                </li>
+                <li>
+                  <strong>Seminaries</strong>
+                  <span>Ericsson, ACA Group, Cegeka, Inetum, Brightest, Refleqt, Appfoundry en de federale politie</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== SEMINARIES ===== -->
-      <section id="seminaries" class="section">
-        <div class="container">
-          <h2 class="section-title">Seminaries &amp; Workshops</h2>
-          <p class="section-subtitle">
-            Gastlezingen en workshops van gerenommeerde bedrijven en experts uit
-            de industrie.
-          </p>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">01/04/2025</span>
-                <h3>Seminarie Politie – Digitaal onderzoek</h3>
-                <p>
-                  Forensics, cybercrime, crypto-assets en data-analyse. Inzicht
-                  in hoe de politie digitale criminaliteit aanpakt.
-                </p>
-              </div>
-            </div>
+      <!-- ===== SKILLS ===== -->
+      <section id="vaardigheden" class="section">
+        <div class="container split">
+          <header class="section-label">
+            <span class="index">05</span>
+            <h2>Toolkit</h2>
+          </header>
 
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">22/04/2025</span>
-                <h3>Seminarie Ericsson – Mobile Networks</h3>
-                <p>
-                  Van 5G naar 6G: hoe volgende generatie netwerken werken en wat
-                  6G gaat betekenen voor connectiviteit.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">29/04/2025</span>
-                <h3>Seminarie ACA Group – ReactJS Intro</h3>
-                <p>
-                  Introductie tot React framework voor moderne frontend
-                  development en componentgebaseerde architectuur.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">06/05/2025</span>
-                <h3>Seminarie Appfoundry – 3D Rendering in Browser</h3>
-                <p>
-                  Van low- tot high-fidelity 3D rendering in webbrowsers.
-                  Technieken voor interactieve 3D-ervaringen.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">05/11/2025</span>
-                <h3>Seminarie Brightest – BDD &amp; ATDD</h3>
-                <p>
-                  Behavior-Driven Development en Acceptance Test-Driven
-                  Development. Beter communiceren tussen development en
-                  business.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">26/11/2025</span>
-                <h3>Seminarie Refleqt – AI in Postman</h3>
-                <p>
-                  Hoe AI integreert in API development tools. Automatisatie en
-                  intelligente features in Postman.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">10/12/2025</span>
-                <h3>Seminarie Inetum – Enterprise UX</h3>
-                <p>
-                  De wereld van User Experience design in enterprise-omgevingen.
-                  Best practices voor schaalbare UX-architectuur.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">17/12/2025</span>
-                <h3>Seminarie Cegeka – Open Source</h3>
-                <p>
-                  Voordelen en praktijk van open source software in enterprise.
-                  Contribueren aan open source projecten.
-                </p>
-              </div>
-            </div>
-          </div>
+          <dl class="toolkit">
+            <div><dt>C# &amp; .NET</dt><dd>.NET Aspire, microservices, REST API-ontwerp, CQRS, Repository, MediatR, event-driven, DDD</dd></div>
+            <div><dt>Web</dt><dd>HTML, CSS, JavaScript, Tailwind CSS, Nuxt, Symfony/Twig, Datastar, Firebase Auth</dd></div>
+            <div><dt>Data</dt><dd>SQL, PostgreSQL, data-integratie, query-optimalisatie</dd></div>
+            <div><dt>Cloud &amp; DevOps</dt><dd>Azure, AWS, Azure DevOps, Docker, YARP, Git</dd></div>
+            <div><dt>Ook</dt><dd>Java &amp; Spring Boot, Python, Flutter</dd></div>
+            <div><dt>Werkwijze</dt><dd>Agile/Scrum, code reviews, technische besluitvorming, projectownership</dd></div>
+          </dl>
         </div>
       </section>
 
       <!-- ===== CONTACT ===== -->
-      <section id="contact" class="section section-alt">
-        <div class="container contact-container">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-subtitle">
-            Wil je samenwerken of heb je een vraag? Stuur me een bericht!
-          </p>
-          <div class="contact-links">
-            <a
-              href="https://github.com/MichaelBielenPXL"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-card"
-            >
-              <img
-                src="shared/images/githubLogo.png"
-                alt="GitHub logo"
-                class="contact-logo"
-              />
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mbielen/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-card"
-            >
-              <img
-                src="shared/images/linkedinLogo.png"
-                alt="LinkedIn logo"
-                class="contact-logo"
-              />
-              <span>LinkedIn</span>
-            </a>
+      <section id="contact" class="section section-contact">
+        <div class="container contact">
+          <div>
+            <span class="index">06</span>
+            <h2>Een project of vacature?<br />Laten we praten.</h2>
+            <p>Ik sta open voor full-stack rollen met C#/.NET en voor freelance opdrachten in Limburg en daarbuiten.</p>
+            <a class="btn btn-invert" href="mailto:mbielen99@gmail.com">Stuur een e-mail</a>
           </div>
+          <ul class="contact-links">
+            <li><a href="mailto:mbielen99@gmail.com"><span>E-mail</span><span>mbielen99@gmail.com</span></a></li>
+            <li><a href="https://www.linkedin.com/in/mbielen/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>in/mbielen ↗</span></a></li>
+            <li><a href="https://github.com/MichaelBielenPXL" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>MichaelBielenPXL ↗</span></a></li>
+          </ul>
         </div>
       </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-      <p>
-        &copy; <span id="year"></span> Michael Bielen – Alle rechten
-        voorbehouden.
-      </p>
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> Michaël Bielen</p>
+        <a href="#top">Terug naar boven ↑</a>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>

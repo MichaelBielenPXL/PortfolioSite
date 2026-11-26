@@ -1,76 +1,49 @@
-// =====================================================
-// Portfolio – Michael Bielen
-// main.js
-// =====================================================
+// Michaël Bielen – Portfolio
 
-// ----- Dynamic year in footer -----
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// ----- Mobile nav toggle -----
-const navToggle = document.getElementById('navToggle');
-const navLinks  = document.getElementById('navLinks');
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('active', isOpen);
-    navToggle.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  // Close nav when a link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('active');
-      navToggle.setAttribute('aria-label', 'Menu openen');
-      document.body.style.overflow = '';
-    });
-  });
-}
-
-// ----- Highlight active nav link on scroll -----
-const sections = document.querySelectorAll('main section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-
-function onScroll() {
-  const scrollY = window.scrollY + 90;
-
-  sections.forEach(section => {
-    const top    = section.offsetTop;
-    const height = section.offsetHeight;
-    const id     = section.getAttribute('id');
-    const link   = document.querySelector(`.nav-links a[href="#${id}"]`);
-
-    if (link) {
-      if (scrollY >= top && scrollY < top + height) {
-        navAnchors.forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-      }
-    }
-  });
-}
-
+// ----- Header border on scroll -----
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
 window.addEventListener('scroll', onScroll, { passive: true });
-onScroll(); // run once on load
+onScroll();
 
-// ----- Fade-in on scroll (Intersection Observer) -----
-const fadeElements = document.querySelectorAll('.card, .timeline-item, .contact-card');
+// ----- Mobile nav -----
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
+function setNav(open) {
+  links.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+}
+
+toggle.addEventListener('click', () => setNav(!links.classList.contains('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setNav(false); });
+
+// ----- Active nav link -----
+const navAnchors = [...links.querySelectorAll('a')];
+const spy = new IntersectionObserver(
+  entries => entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    navAnchors.forEach(a => a.classList.toggle('active', a.hash === '#' + entry.target.id));
+  }),
+  { rootMargin: '-45% 0px -50% 0px' }
 );
+document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
 
-fadeElements.forEach(el => {
-  el.classList.add('fade-in');
-  observer.observe(el);
+// ----- Reveal on scroll -----
+const revealer = new IntersectionObserver(
+  entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealer.unobserve(entry.target);
+    }
+  }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.service, .process, .case, .site-card, .project-row, .role, .edu li, .toolkit > div').forEach(el => {
+  el.classList.add('reveal');
+  revealer.observe(el);
 });
